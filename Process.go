@@ -61,10 +61,10 @@ func main(){
     Printout := Costomer_Copy {
 
 	fmt.Println("Please put in the details"),//im workin on takin input from a machine
-	fmt.Scanln(&RetailName),
-        fmt.Scanln(&itemName),
-        fmt.Scanln(&Cost),//this should grab the input
-        fmt.Scanln(&Number),
+	fmt.Scanln(*RetailName),
+        fmt.Scanln(*itemName),
+        fmt.Scanln(*Cost),//this should grab the input
+        fmt.Scanln(*Number),
 
     }
 
@@ -76,7 +76,7 @@ func main(){
 
 	encoder.Encode(Printout)
 	var NewPrintout Printout
-	decoder.Decode(&NewPrintout)
+	decoder.Decode(*NewPrintout)
         fmt.Println(NewPrintout.String())
 
      }
